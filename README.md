@@ -12,3 +12,11 @@ The project implements:
 - A **fuzzy interpolation scheme** for online control blending
 - Closed-loop simulation and performance evaluation
 - A **Lyapunov-based stability analysis** of the overall FMPC control system
+
+
+## Project structure
+├── src/                 # Main simulation entry point
+├── models/              # Simulink models (nonlinear & MPC)
+├── linearization/       # Linearization scripts
+├── mpc_setup/           # MPC matrix generation
+├── lyapunov/            # Stability checks
