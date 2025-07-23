@@ -16,36 +16,37 @@ The project implements:
 ---
 
 ## Project Structure
-├── src/ # Entry point and simulation script
-│ └── FMPC_Mainfile.m
+.
+├── src/                          # Entry point and main simulation script
+│   └── FMPC_Mainfile.m
 │
-├── models/ # Simulink models (nonlinear and linear)
-│ ├── fmpc_simulation_3modelle.slx
-│ ├── fmpc_simulation_3modelle_ohne_z.slx
-│ ├── fmpc_simulation_4modelle.slx
-│ ├── mpc1_simulation.slx
-│ ├── mpc2_simulation.slx
-│ ├── mpc3_simulation.slx
-│ └── mpc4_simulation.slx
+├── models/                       # Simulink models (nonlinear and linear)
+│   ├── fmpc_simulation_3modelle.slx
+│   ├── fmpc_simulation_3modelle_ohne_z.slx
+│   ├── fmpc_simulation_4modelle.slx
+│   ├── mpc1_simulation.slx
+│   ├── mpc2_simulation.slx
+│   ├── mpc3_simulation.slx
+│   └── mpc4_simulation.slx
 │
-├── linearization/ # Linearization of the drivetrain
-│ ├── init_parameter_nl.m
-│ └── Linearisierung.m
-│ └── model_lin.m
-│ └── nugap_metrik_distanz.m
+├── linearization/               # Linearization of the drivetrain
+│   ├── init_parameter_nl.m
+│   ├── Linearisierung.m
+│   ├── model_lin.m
+│   └── nugap_metrik_distanz.m
 │
-├── mpc_setup/ # MPC setup and matrix generation
-│ ├── mpc_matrizen.m
-│ └── mpc_modellerweiterung.m
+├── mpc_setup/                   # MPC setup and model matrix generation
+│   ├── mpc_matrizen.m
+│   └── mpc_modellerweiterung.m
 │
-├── further_system_analysis/ # bode plot, plot of membership functions, spring stiffness
-│ └── plot_bode.m
-│ └── plot_federsteifigkeit.m
-│ └── Zugehoerigkeitsfunktionen.m
+├── further_system_analysis/     # Additional system analysis
+│   ├── plot_bode.m
+│   ├── plot_federsteifigkeit.m
+│   └── Zugehoerigkeitsfunktionen.m
 │
-├── lyapunov/ # Lyapunov-based stability checks
-│ └── lmi_2D_Q_variabel.m
-│ └── lmi_2D_Q_konst_lokal.m
-│ └── lmi_2D_Q_konst_global.m
+├── lyapunov/                    # Lyapunov-based stability analysis
+│   ├── lmi_2D_Q_variabel.m
+│   ├── lmi_2D_Q_konst_lokal.m
+│   └── lmi_2D_Q_konst_global.m
 │
-├── README.md
+└── README.md
